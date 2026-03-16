@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperHeroes</title>
+</head>
+<body>
+    <h1>Formulario de SuperHeroes</h1>
+    <form th:action="@{/superheroes/guardar}"  th:object="${superheroes}" method="post">
+        <div>
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" th:field="*{titulo}">
+        </div>
+
+        <div>
+            <label for="plataforma">Plataforma:</label>
+            <input type="text" id="plataforma" th:field="*{plataforma}">
+        </div>
+
+        <div>
+            <label for="genero">Género:</label>
+            <input type="text" id="genero" th:field="*{genero}">
+        </div>
+
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+</body>
+</html>
