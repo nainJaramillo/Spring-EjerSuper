@@ -1,18 +1,22 @@
 package com.example.demo.Service;
 
-import com.example.demo.Exceptions.DuplicadoException;
-import com.example.demo.Exceptions.NoEncontradoException;
-import com.example.demo.Model.SuperHeroe;
-import com.example.demo.Repository.SuperHeroeRepository;
+import com.example.demo.exceptions.DuplicadoException;
+import com.example.demo.exceptions.NoEncontradoException;
+import com.example.demo.model.SuperHeroe;
+import com.example.demo.repository.SuperHeroeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
-public class SuperHeroesService {
-    private final SuperHeroeRepository superHeroeRepository;
 
-    public SuperHeroesService(SuperHeroeRepository superHeroeRepository) {
+public class SuperHeroesServiceImpl {
+
+    @Autowired
+    private SuperHeroeRepository superHeroeRepository;
+
+    public SuperHeroesServiceImpl(SuperHeroeRepository superHeroeRepository) {
         this.superHeroeRepository = superHeroeRepository;
     }
     public void registrarSuperheroe(SuperHeroe s){

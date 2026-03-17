@@ -1,6 +1,6 @@
-package com.example.demo.Repository;
+package com.example.demo.repository;
 
-import com.example.demo.Model.SuperHeroe;
+import com.example.demo.model.SuperHeroe;
 
 import java.util.List;
 import java.util.Optional;

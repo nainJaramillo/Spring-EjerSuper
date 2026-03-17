@@ -1,4 +1,4 @@
-package com.example.demo.Exceptions;
+package com.example.demo.exceptions;
 
 public class DuplicadoException extends RuntimeException {
     public DuplicadoException(String message) {
